@@ -1,0 +1,24 @@
+{
+  "name": "Github_Profile",
+  "version": "0.0.0",
+  "authors": [
+    "Veronika <vstetter@hotmail.com>"
+  ],
+  "description": "recreate Github Profile",
+  "main": "main.js",
+  "moduleType": [
+    "node"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "underscore": "~1.7.0",
+    "jquery": "~2.1.3"
+  }
+}
