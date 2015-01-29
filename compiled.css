@@ -1,3 +1,6 @@
+* {
+  box-sizing: border-box; }
+
 body {
   margin: 0;
   padding: 0;
@@ -20,10 +23,62 @@ aside {
   display: inline-block;
   vertical-align: top;
   width: 28%;
-  background-color: grey; }
+  background-color: white; }
+  aside h1 {
+    font-size: 1.3em;
+    padding-bottom: 0; }
+  aside h3 {
+    font-weight: normal;
+    margin-bottom: 2em;
+    color: gray;
+    font-size: 1em; }
+  aside p {
+    font-size: 0.75em; }
+    aside p span {
+      color: lightgray;
+      padding-right: 1em; }
+
+.userStats {
+  display: block; }
+  .userStats a {
+    display: inline-block;
+    vertical-align: top;
+    width: 33%;
+    color: blue; }
+    .userStats a span {
+      color: gray;
+      font-size: 0.25em; }
 
 section {
   display: inline-block;
   vertical-align: top;
   width: 70%;
-  background-color: grey; }
+  background-color: white;
+  border-top: 1px solid lightgray; }
+
+.repoName {
+  display: block; }
+
+.repoNameDescrUpdate, .repoStatsLine {
+  display: inline-block;
+  vertical-align: top; }
+
+.repoNameDescrUpdate {
+  width: 80%;
+  text-align: left; }
+  .repoNameDescrUpdate h3 {
+    font-weight: bold;
+    color: #4183c4;
+    font-size: 1.1em;
+    margin-bottom: 0; }
+  .repoNameDescrUpdate p {
+    font-size: 0.75em;
+    color: gray; }
+
+.repoStatsLine {
+  width: 20%;
+  text-align: right;
+  padding-top: 1.25em; }
+  .repoStatsLine span {
+    font-size: 0.75em;
+    color: gray; }

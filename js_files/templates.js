@@ -2,54 +2,50 @@ var templates = {};
 
 templates.userProfile = [
 "<div>",
-"<img src = <%= avatar_url %>>",
+"<img src = <%= avatar_url %> width='230' height='230'>",
 "<h1><%= name %></h1>",
 "<h3><%= login %></h3>",
 "<p><span class='octicon octicon-location'></span><%= location %></p>",
-"<p><span class='octicon octicon-clock'></span><%= created_at %></p>",
-"<h6><%= followers %></h6>",
-"<h6><%= starred_url %></h6>",
-"<h6><%= following %></h6>",
+"<p><span class='octicon octicon-clock'></span><span>Joined on </span><%= created_at %></p>",
+"<div class='userStats'>",
+"<a href ='<%= followers %>'><span>Followers</span></a>",
+"<a href ='<%= starred_url %>'><span>Starred</span></a>",
+"<a href = '<%= following %>'><span>Following</span></a>",
+"</div>",
+"</div>"
+
+].join("");
+
+
+
+templates.repos = [
+"<div class = 'repoName'>",
+"<div class='repoNameDescrUpdate'>",
+"<h3><%= name %></h3>",
+"<p><%= description  %></p>",
+"<p><%= updated_at %></p>",
+"</div>",
+"<div class='repoStatsLine'>",
+"<span><%= language %></span>",
+"<span class='octicon octicon-star'></span>",
+"<span><%= stargazers_count %></span>",
+"<span class='octicon octicon-git-branch'></span>",
+"<span><%= forks_count %></span>",
+"</div>",
 "</div>"
 
 ].join("");
 
 
 //
-// templates.repos = [
-// "<div class = 'repoName'>",
-// "<h3><%= name %></h3>",
-// "<p><%= description  %></p>",
-// "<p><%= updated_at %></p>",
-// "<p><%= language %></p>",
-// "<span class='octicon octicon-star'></span>",
-// "<p><%= stargazers_count %></p>",
-// "<span class='octicon octicon-git-branch'></span>",
-// "<p><%= forks_count %></p>",
+// templates.activities = [
+// "<div class = 'activityID'<%= id >",
+// "<%= type  %>",
+// "<%=  payload.ref %>",
+// "<%=  repo.name %>",
+// "<%=  message %>",
+// "<%=  payload.commits %>",//message part of an object in an array
+// "<%=  created_at %>"
 // "</div>"
-//
+// //
 // ].join("");
-//
-
-//
-// templates.activity_gitcommit = [
-// "<span class='octicon octicon-git-commit'></span>",
-// "<div>"
-// "<%=  %>",
-// "<%=  %>",
-// "<%=  %>",
-// "</div>"
-//
-// ]
-//
-// templates.activity_repo = [
-//"<span class="octicon octicon-repo"></span>"
-// ]
-//
-// templates.activity_branch = [
-//"<span class="octicon octicon-git-branch"></span>"
-// ]
-//
-// templates.activity_comment = [
-//"<span class="octicon octicon-comment-discussion"></span>"
-// ]
