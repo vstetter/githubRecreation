@@ -1,3 +1,4 @@
+
 var githubProfile ={
 
 init: function() {
@@ -10,6 +11,7 @@ initStyling: function() {
 
   githubProfile.renderUserprofile();
   githubProfile.renderAllRepos(githubRepos);
+  githubProfile.renderAllActivities(githubEvents);
 },
 //
 // initEvents: function() {
@@ -34,9 +36,23 @@ renderRepos: function (repoObject) {
 renderAllRepos: function (repoArray) {
 
   _.each(repoArray,githubProfile.renderRepos);
+},
+
+
+renderActivity: function (myObject) {
+
+  if (myObject.type='PushEvent') {
+  var pushTmpl = _.template(templates.pushEvent);
+  $(".activityfeed").append(pushTmpl(myObject));
+  } else if (myObject.type='CreateEvent') {
+  var createTmpl = _.template(templates.createEvent);
+  $(".activityfeed").append(createTmpl(myObject));
+  };
+},
+
+renderAllActivities: function (activityArray) {
+  _.each(activityArray, githubProfile.renderActivity)
 }
-
-
 };
 
 

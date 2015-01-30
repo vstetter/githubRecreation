@@ -37,15 +37,31 @@ templates.repos = [
 ].join("");
 
 
-//
-// templates.activities = [
-// "<div class = 'activityID'<%= id >",
-// "<%= type  %>",
-// "<%=  payload.ref %>",
-// "<%=  repo.name %>",
-// "<%=  message %>",
+
+templates.pushEvent = [
+"<div class = 'push'>",
+"<%=  created_at %>",
+"<span class='pushBlue'><%= actor.login %></span>",
+"<span> pushed to </span>",
+"<span class='pushBlue'><%=  payload.ref %></span>",
+"<span> at </span>",
+"<span class='pushBlue'><%=  repo.name %></span>",
+// "<p><%=  message %></p>",
 // "<%=  payload.commits %>",//message part of an object in an array
-// "<%=  created_at %>"
-// "</div>"
-// //
-// ].join("");
+"</div>"
+
+].join("");
+
+templates.createEvent = [
+"<div class = 'create'>",
+"<%=  created_at %>",
+"<span class='createBlue'><%= actor.login %></span>",
+"<span> created </span>",
+"<span class='createBlue'><%= payload.ref_type %></span>",
+"<span> at </span>",
+"<span class='createBlue'><%=  repo.name %></span>",
+// "<p><%=  message %></p>",
+// "<%=  payload.commits %>",//message part of an object in an array
+"</div>"
+
+].join("");

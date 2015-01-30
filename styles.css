@@ -1,130 +1,97 @@
 * {
-  box-sizing: border-box;
-}
+  box-sizing: border-box; }
 
 body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
-  color: black;
-}
+  color: black; }
 
 a {
-  text-decoration: none;
-}
-
-
+  text-decoration: none; }
 
 .wrapper {
   width: 100%;
-  background-color: white;
-}
-
+  background-color: white; }
 
 .container {
   display: block;
   width: 980px;
-  margin: 10px auto;
-}
+  margin: 10px auto; }
 
 aside {
   display: inline-block;
   vertical-align: top;
   width: 28%;
-  background-color: white;
-  h1 {
+  background-color: white; }
+  aside h1 {
     font-size: 1.3em;
-    padding-bottom: 0;
-  }
-  h3 {
+    padding-bottom: 0; }
+  aside h3 {
     font-weight: normal;
     margin-bottom: 2em;
     color: gray;
-    font-size: 1em;
-  }
-  p {
-    font-size: 0.75em;
-    span {
+    font-size: 1em; }
+  aside p {
+    font-size: 0.75em; }
+    aside p span {
       color: lightgray;
-      padding-right: 1em;
-    }
-  }
-
-}
-
-
+      padding-right: 1em; }
 
 .userStats {
-  display: block;
-  a {
+  display: block; }
+  .userStats a {
     display: inline-block;
     vertical-align: top;
     width: 33%;
-    color: blue;
-    span {
+    color: blue; }
+    .userStats a span {
       color: gray;
-      font-size:0.25em;
-    }
-  }
-}
+      font-size: 0.25em; }
 
 section {
   display: inline-block;
   vertical-align: top;
   width: 70%;
   background-color: white;
-  border-top: 1px solid lightgray;
-
-}
+  border-top: 1px solid lightgray; }
 
 .repoName {
-  display: block;
-
-}
+  display: block; }
 
 .repoNameDescrUpdate, .repoStatsLine {
   display: inline-block;
-  vertical-align: top;
-}
+  vertical-align: top; }
 
 .repoNameDescrUpdate {
   width: 80%;
-  text-align: left;
-  h3 {
+  text-align: left; }
+  .repoNameDescrUpdate h3 {
     font-weight: bold;
     color: #4183c4;
     font-size: 1.1em;
-    margin-bottom: 0;
-  }
-  p {
+    margin-bottom: 0; }
+  .repoNameDescrUpdate p {
     font-size: 0.75em;
-    color: gray;
-  }
-}
+    color: gray; }
 
 .repoStatsLine {
   width: 20%;
   text-align: right;
-  padding-top: 1.25em;
-  span {
+  padding-top: 1.25em; }
+  .repoStatsLine span {
     font-size: 0.75em;
-    color: gray;
-  }
-}
+    color: gray; }
 
 .push {
   display: inline-block;
   font-size: 0.75em;
-  font-weight: bold;
-  .pushBlue {
-    color:#4183c4;
-  }
-}
+  font-weight: bold; }
+  .push .pushBlue {
+    color: #4183c4; }
 
 .create {
   font-size: 0.75em;
-  font-weight: bold;
-  .createBlue {
-    color:#4183c4;
-  }
-}
+  font-weight: bold; }
+  .create .createBlue {
+    color: #4183c4; }
