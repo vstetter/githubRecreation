@@ -40,7 +40,8 @@ templates.repos = [
 
 templates.pushEvent = [
 "<div class = 'push'>",
-"<%=  created_at %>",
+"<span class='octicon octicon-git-commit'></span>",
+"<p class='time'><%=  created_at %></p>",
 "<span class='pushBlue'><%= actor.login %></span>",
 "<span> pushed to </span>",
 "<span class='pushBlue'><%=  payload.ref %></span>",
@@ -54,7 +55,7 @@ templates.pushEvent = [
 
 templates.createEvent = [
 "<div class = 'create'>",
-"<%=  created_at %>",
+"<p class='time'><%=  created_at %></p>",
 "<span class='createBlue'><%= actor.login %></span>",
 "<span> created </span>",
 "<span class='createBlue'><%= payload.ref_type %></span>",

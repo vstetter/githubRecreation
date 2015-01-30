@@ -4,19 +4,28 @@ var githubProfile ={
 init: function() {
 
   githubProfile.initStyling();
-  // githubProfile.initEvents();
+  githubProfile.initEvents();
 },
-//
+
 initStyling: function() {
 
   githubProfile.renderUserprofile();
   githubProfile.renderAllRepos(githubRepos);
   githubProfile.renderAllActivities(githubEvents);
 },
-//
-// initEvents: function() {
-//
-// },
+
+initEvents: function() {
+
+  $('.activeClass a').click(function(event){
+    event.preventDefault();
+
+    var relatedClass = "." + $(this).attr('rel');
+    $(this).closest("li").siblings().removeClass('activeNav');
+    $(this).closest('li').addClass("activeNav");
+    $(relatedClass).siblings().removeClass('active');
+    $(relatedClass).addClass('active');
+  });
+},
 
 
 renderUserprofile: function () {
@@ -41,10 +50,10 @@ renderAllRepos: function (repoArray) {
 
 renderActivity: function (myObject) {
 
-  if (myObject.type='PushEvent') {
+  if (myObject.type==='PushEvent') {
   var pushTmpl = _.template(templates.pushEvent);
   $(".activityfeed").append(pushTmpl(myObject));
-  } else if (myObject.type='CreateEvent') {
+} else if (myObject.type==='CreateEvent') {
   var createTmpl = _.template(templates.createEvent);
   $(".activityfeed").append(createTmpl(myObject));
   };
@@ -59,5 +68,7 @@ renderAllActivities: function (activityArray) {
 
 $(document).ready(function () {
 githubProfile.init();
+
+
 
 });

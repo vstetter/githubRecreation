@@ -77,6 +77,23 @@ section {
 
 }
 
+ul {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+
+  li {
+    display: inline-block;
+    a {
+      text-decoration: none;
+      display: block;
+      color: black;
+      font-size: 0.9em;
+      padding: 0.5em;
+    }
+  }
+}
+
 .repoName {
   display: block;
 
@@ -113,7 +130,7 @@ section {
 }
 
 .push {
-  display: inline-block;
+/*   display: inline-block; */
   font-size: 0.75em;
   font-weight: bold;
   .pushBlue {
@@ -127,4 +144,23 @@ section {
   .createBlue {
     color:#4183c4;
   }
+}
+
+.time {
+  color: gray;
+  font-size:0.45em;
+}
+
+.activityfeed, .repos {
+  display: none;
+}
+
+.active {
+  display: inline-block;
+}
+
+
+.activeNav a {
+  text-decoration: none;
+  color: black;
 }
